@@ -1,15 +1,13 @@
 name: Vefiy changed Readme.md
 
 on: [push]
-
 jobs:
   verify-chage-files:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-
-    - name: Get changed files in the docs folder
-      id: changed-files-specific
-      uses: tj-actions/changed-files@v35
-      with:
-        files: readme.md
+      - uses: actions/checkout@v2
+      - name: Get changed files in the docs folder
+        id: changed-files-specific
+        uses: tj-actions/changed-files@v35
+        with:
+          files: readme.md
